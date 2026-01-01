@@ -1,6 +1,6 @@
 # ComboMaster
 
-**ComboMaster** is a desktop tool for creating, organizing, and displaying fighting-game combos with a live, customizable overlay — built for practice, learning, and streaming.
+**ComboMaster** is a desktop tool for creating, organizing, and displaying fighting-game combos with a live, customizable overlay — built for practice, learning, streaming, and sharing combos with friends.
 
 ---
 
@@ -33,8 +33,12 @@ Everything saves automatically.
 
 ### Combo Names & Sharing
 - Edit combo names directly
-- Export combos as a short **share code**
-- Import a share code to instantly load a combo
+- Generate a **share code** for any combo
+- Send the code to friends using ComboMaster
+- Import a share code to instantly load the combo into the app
+- Save as image or copy to clipboard to share combo as image with friends
+
+No accounts or online just copy and paste the code or image.
 
 ---
 
