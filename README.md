@@ -7,7 +7,9 @@
 ## 🚀 Quick Start
 
 1. **Download ComboMaster**
-2. **Run `ComboMaster.exe`**
+2. Extract ComboMaster-main
+3. ComboMaker0.0.1
+4. **Run `ComboMaster.exe`**
 
 That’s it.  
 No installer. No setup. No account.
