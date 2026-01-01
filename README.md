@@ -7,8 +7,7 @@
 ## 🚀 Quick Start
 
 1. **Download ComboMaster**
-   <img width="1317" height="671" alt="image" src="https://github.com/user-attachments/assets/859807ce-ea88-4a1c-8088-1f6c2893010b" />
-
+https://drive.google.com/file/d/1I4u0VRLUFM_eUZVqVF-4nA71pSyNYSJI/view?usp=sharing
 3. Extract ComboMaster-main
 4. ComboMaker0.0.1
 5. **Run `ComboMaster.exe`**
