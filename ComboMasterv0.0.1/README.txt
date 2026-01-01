@@ -1,0 +1,1 @@
+Run ComboMaster.exe and allow app

@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/monolith.min.css" />
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      background: transparent;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .wrap {
+      padding: 0;
+      display: grid;
+      place-items: center;
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    /* Card look */
+    .pcr-app {
+      border-radius: 16px !important;
+      box-shadow: 0 10px 30px rgba(0,0,0,.18) !important;
+      padding: 16px !important;
+      border: 0 !important;
+    }
+
+    /* Round the SV box */
+    .pcr-selection .pcr-color-preview,
+    .pcr-selection .pcr-color-palette,
+    .pcr-selection .pcr-color-chooser,
+    .pcr-selection .pcr-color-opacity,
+    .pcr-selection .pcr-color-palette {
+      border-radius: 12px !important;
+    }
+
+    /* Thin hue slider */
+    .pcr-selection .pcr-color-chooser {
+      height: 12px !important;
+      border-radius: 999px !important;
+    }
+
+    /* Hide alpha slider */
+    .pcr-selection .pcr-color-opacity {
+      display: none !important;
+    }
+
+    /* Hex input styling */
+    .pcr-interaction input {
+      height: 36px !important;
+      border-radius: 10px !important;
+      border: 1px solid #E5E5E5 !important;
+      padding: 0 12px !important;
+      font-size: 14px !important;
+    }
+
+    /* Hide extra buttons */
+    .pcr-interaction .pcr-save,
+    .pcr-interaction .pcr-cancel,
+    .pcr-interaction .pcr-clear {
+      display: none !important;
+    }
+
+    .pcr-interaction {
+      gap: 10px !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div id="picker"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+  <script>
+    const pickr = Pickr.create({
+      el: '#picker',
+      theme: 'monolith',
+      default: '#333333',
+      useAsButton: false,
+      components: {
+        preview: true,
+        opacity: false,
+        hue: true,
+        interaction: {
+          hex: true,
+          rgba: false,
+          hsla: false,
+          hsva: false,
+          cmyk: false,
+          input: true
+        }
+      }
+    });
+
+    function post(type, payload) {
+      if (window.chrome && window.chrome.webview) {
+        window.chrome.webview.postMessage({ type, ...payload });
+      }
+    }
+
+    let changeTimer = null;
+    const emitHex = (color) => {
+      try {
+        const hex = color.toHEXA().toString().toUpperCase();
+        post('colorChanged', { hex });
+      } catch (e) { /* ignore */ }
+    };
+
+    // Debounce rapid updates while dragging to reduce host churn
+    pickr.on('change', (color) => {
+      clearTimeout(changeTimer);
+      changeTimer = setTimeout(() => emitHex(color), 80);
+    });
+
+    // Final value on release
+    pickr.on('changestop', (instance, color) => emitHex(color));
+
+    pickr.on('init', () => {
+      pickr.show(); // always visible, no click needed
+      post('ready', {});
+    });
+
+    // Exposed to host
+    window.setColorFromHost = (hex) => {
+      try { pickr.setColor(hex); } catch (e) { /* ignore */ }
+    };
+
+    window.getColorHex = () => {
+      try { return pickr.getColor().toHEXA().toString().toUpperCase(); }
+      catch { return null; }
+    };
+  </script>
+</body>
+</html>
