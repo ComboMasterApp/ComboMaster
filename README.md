@@ -1,145 +1,101 @@
-# ComboMaster
+# 📥 Download
 
-**ComboMaster** is a desktop tool for creating, organizing, and displaying fighting-game combos with a live, customizable overlay — built for practice, learning, streaming, and sharing combos with friends.
+👉 **[Download ComboMaster v0.0.1 (Windows ZIP)](https://github.com/ComboMasterApp/ComboMaster/releases/download/v0.0.1/ComboMasterv0.0.1.zip)**
 
----
+1. Download the ZIP file using the link above  
+2. Extract the contents  
+3. Run **ComboMaster.exe**
 
-## 🚀 Quick Start
+> ⚠️ **Windows SmartScreen Notice**  
+> On first launch, Windows may warn you about running an unknown app.  
+> Click **More info → Run anyway**.
 
-1. **Download ComboMaster**
-https://drive.google.com/file/d/1I4u0VRLUFM_eUZVqVF-4nA71pSyNYSJI/view?usp=sharing
-3. Extract ComboMaster-main
-4. ComboMaker0.0.1
-5. **Run `ComboMaster.exe`**
-
-That’s it.  
-No installer. No setup. No account.
-
-Everything saves automatically.
+> 🪟 **Overlay Compatibility Note**  
+> The ComboMaster overlay currently works in **Borderless Windowed mode only**.  
+> Support for **Exclusive Fullscreen mode** will be added in a future update.
 
 ---
 
-## 🎮 Using ComboMaster
+# 🎮 ComboMaster — Release 1
 
-### Creating Combos
-- Type inputs to build a combo
-- Add new blocks with the **➕** button
-- Insert blocks between existing ones
-- Clone or delete blocks as needed
-- Long combos automatically wrap to new lines
-
-### Playlists
-- Create multiple playlists
-- Rename playlists inline
-- Reorder playlists and combos
-- Delete playlists you no longer need
-
-### Combo Names & Sharing
-- Edit combo names directly
-- Generate a **share code** for any combo
-- Send the code to friends using ComboMaster
-- Import a share code to instantly load the combo into the app
-- Save as image or copy to clipboard to share combo as image with friends
-
-No accounts or online just copy and paste the code or image.
+**First public release of ComboMaster**, focused on building, organizing, and sharing fighting-game combos with a resizable, always-on-top overlay.
 
 ---
 
-## 🕹 Game Support
+# 🎮 Supported Games
 
-ComboMaster supports multiple fighting games, each with the correct inputs and notation:
+ComboMaster currently supports the following fighting games:
 
-- **2XKO**
-- **Guilty Gear**
-- **Street Fighter 6**
-- **Tekken 8**
+- **Street Fighter 6 (SF6)**  
+- **TEKKEN 8**  
+- **2XKO**  
+- **Guilty Gear Strive**
 
-Switching games updates available directions and buttons automatically.
-
----
-
-## 🧭 Input Display Modes
-
-- **Icon Mode** – shows directional arrows and input icons
-- **Text Mode** – shows classic numpad notation (1–9)
-
-You can switch modes at any time.  
-Neutral input is handled correctly per game.
+More games will be added over time.
 
 ---
 
-## 🖥 Overlay
+# ✨ Highlights
 
-The overlay displays your combo in real time — ideal for practice or streaming.
-
-- Play / Stop combo display
-- Show or hide overlay using a keybind
-- Move and resize the overlay freely
-- Overlay remembers its position and size
-- Change the overlay background color
-- Export the overlay as an image
-- Copy the overlay image to the clipboard
+- 🧩 Block-based combo editor  
+- 📌 Always-on-top in-game overlay  
+- 📂 Game-specific playlists with sharing  
+- ⌨️ Fully customizable hotkeys  
 
 ---
+
+# 🛠 Features
+
+## 🧩 Combo Editor
+- Create, edit, clone, delete, and reorder combo blocks  
+- Insert directions, attacks, and system inputs from game definitions  
+- Add and remove timing markers between blocks  
+- Quickly clear or replace block text  
+
+## 🪟 Overlay Playback
+- Resizable, movable, always-on-top overlay window  
+- Display blocks as icons or text (configurable)  
+- Timing separators and labels for block timing  
+- Play, stop, and reset overlay via hotkeys  
+
+## 📂 Playlists & Navigation
+- Multiple playlists organized by game  
+- Switch playlists and combos using hotkeys  
+- Import and export playlists via share hashes  
+
+## 🔗 Sharing & Export
+- Export overlay view as PNG  
+- Copy overlay image directly to clipboard  
+- Share combos or playlists by hash  
+- Import shared combos/playlists by hash  
+
+## 📝 Notation
+- Live notation preview with copy support  
+- Optional timing display in notation  
 
 ## ⚙️ Settings
+- Theme selection: Light, Dark, or System Default  
+- Overlay appearance controls (background color & preview)  
+- Combo display options:
+  - Separators  
+  - Timing labels  
+  - Line width  
+- Keybind editor with reset options  
 
-### Appearance
-- Light, Dark, or System theme
-- Customize overlay background color
-- Recently used colors are saved
-- Reset overlay color to default
-
-### Keybinds
-- Customize keyboard shortcuts for:
-  - Toggle overlay
-  - Next / previous combo
-  - Next / previous playlist
-- Click to record new keybinds
-- Tooltips show current bindings
-
-### Combo Display
-- Toggle combo separators
-- Adjust line wrapping behavior
-
-All settings are saved automatically.
+## ❓ Help & Support
+- Built-in Help dialog with FAQ  
+- Discord link for support and bug reports  
 
 ---
 
-## 💾 Automatic Saving
+# 🚀 Coming Soon
 
-ComboMaster automatically remembers:
-- Playlists and combos
-- Overlay position, size, and color
-- Selected theme
-- Keybinds
-- Display preferences
+- 🎮 **Expanded game support**  
+  More fighting games and input layouts are on the way.
 
-When you reopen the app, everything is exactly where you left it.
+- 🎨 **Deeper color customization**  
+  Fine-grained control over overlay colors, block styling, and themes.
 
----
-
-## 🧩 Designed to Stay Out of the Way
-
-- Clean, minimal interface
-- Compact combo blocks
-- Smooth scrolling
-- Clear tooltips
-- Fast keyboard-driven workflow
-
----
-
-## 🐞 Bug Reports & 💡 Feature Requests
-
-Found a bug or have an idea to improve ComboMaster?
-
-👉 **Join the ComboMaster Discord:**  
-https://discord.gg/85ANr6PAnz
-
-Please include:
-- What you were doing
-- What you expected to happen
-- What actually happened (for bugs)
-- Screenshots or clips if possible
-
-Feedback directly shapes future updates — thanks for helping make ComboMaster better.
+- 🧠 **Community-driven features**  
+  Have an idea? **Feature requests are very welcome!**  
+  Open an issue or reach out — I’d love to add features that help players and creators.
