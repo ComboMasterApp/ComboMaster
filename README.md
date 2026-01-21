@@ -1,6 +1,6 @@
 # 📥 Download
 
-👉 **[Download ComboMaster v0.0.1 (Windows ZIP)](https://github.com/ComboMasterApp/ComboMaster/releases/download/v0.0.1/ComboMasterv0.0.1.zip)**
+
 
 1. Download the ZIP file using the link above  
 2. Extract the contents  
